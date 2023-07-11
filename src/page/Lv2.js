@@ -6,7 +6,7 @@ function Lv2() {
       <div id='Page'>
       <div id='header'>
         <h1>LEVEL 2</h1>
-        <h1>LEVEL 2</h1>
+      
       
         </div>
         <text>Todo-list</text>
