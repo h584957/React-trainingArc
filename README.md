@@ -12,3 +12,33 @@ Each level is a small project for me to learn
 and progress. 
 
 #########
+
+
+REFERENCES: 
+
+https://fontawesome.com/
+
+https://mathjs.org/
+
+
+#########
+
+ToLearn : 
+
+* Grid
+* Bootstrap
+* Animation
+* Transition
+
+#########
+
+
+
+
+
+
+
+
+
+
+
