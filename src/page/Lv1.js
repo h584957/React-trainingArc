@@ -1,6 +1,6 @@
 import '../style/DefaultPage.css';
-import '../style/Calculator.css';
-import '../style/Lv1.css';
+import '../style/lv1/Calculator.css';
+import '../style/lv1/Lv1.css';
 import { evaluate } from 'mathjs';
 
 
@@ -77,7 +77,7 @@ const handleEnter=(e)=>{
           <div className='CalculatorContainer' onKeyDown={handleEnter}>
 
               <div id="inputContainer">
-                <input id='inputBar'></input>
+                <input id='inputBar' autoComplete='off'></input>
               </div>
 
 

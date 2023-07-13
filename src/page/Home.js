@@ -1,5 +1,5 @@
 
-import '../style/Home.css';
+import '../style/home/Home.css';
 import '../style/DefaultPage.css';
 
 

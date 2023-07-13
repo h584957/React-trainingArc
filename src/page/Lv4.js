@@ -1,4 +1,6 @@
 import '../style/DefaultPage.css';
+import '../style/lv4/Lv4.css';
+
 
 function Lv4() {
     return (
