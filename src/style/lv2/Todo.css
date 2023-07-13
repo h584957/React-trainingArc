@@ -38,12 +38,23 @@
     height: 600px;
 
     margin-top: 100px;
-
-
 }
 
+#addTodoBtn{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: 0;
 
-#ul1{
+    font-size: xx-large;
+}
+
+#list{
+    color: white;
+    font-size: xx-large;
+}
+#listcontainer{
     border: solid red;
     height: 100%;
     color: white;
