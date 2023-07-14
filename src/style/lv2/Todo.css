@@ -1,8 +1,6 @@
 #todoBox{
     border: purple solid;
     width: 70%;
-    
-    
 }
 .todoBtn{
     color: white;
@@ -13,24 +11,27 @@
     height: 75px;
  
     font-size: xx-large;
-
 }
 #checkTodo{
     background-color: green;
-   border-radius: 100px;
- 
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-left: 10px;
 
 }
 #deleteTodo{
     background-color: red;
+    width: 50px;
+    height: 50px;
     border-radius: 100px;
+    margin-left: 10px;
 
 }
 .todoBtnPics{
     height: 80px;
     width: 80px;
     background-color: none;
-  
 }
 #todoListBox{
     border: solid green;
@@ -43,6 +44,15 @@
 #addTodoBtn{
     height: 100px;
     width: 100px;
+    background-color: black;
+    color: white;
+    border: 0;
+
+    font-size: xx-large;
+}
+#archiveBtn{
+    height: 100px;
+    width: 200px;
     background-color: black;
     color: white;
     border: 0;

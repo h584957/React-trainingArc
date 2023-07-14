@@ -28,6 +28,18 @@ function Lv2() {
       setNewTodos(e.target.value);
     };
 
+    const handleCompleteTodo = (e) => {
+
+      console.log("Todo was completed");
+    };
+
+    const handleDeleteTodo = (e) => {
+
+      
+      console.log("Todo was deleted");
+    };
+
+
     const handleEnter = (e) => {
 
 
@@ -52,10 +64,10 @@ function Lv2() {
 
             <div id='todoListBox'>
               <ul id='listContainer'>
-                {toDos.map((todo, index) => (<li id="list" key={index}>{todo}<button id='checkTodo' className='todoBtn'>
+                {toDos.map((todo, index) => (<li id="list" key={index}>{todo}<button id='checkTodo' onClick={handleCompleteTodo} className='todoBtn'>
             <FontAwesomeIcon icon={faCheck} />
             </button>
-            <button id='deleteTodo' className='todoBtn'>
+            <button id='deleteTodo' onClick={handleDeleteTodo} className='todoBtn'>
             <FontAwesomeIcon icon={faXmark} />
             </button> </li>))}                
                 
@@ -64,7 +76,8 @@ function Lv2() {
 
             </div>
           
-            
+            <button id ='archiveBtn'onClick={handleAddTodo}>Archive</button>
+
           </div>
           <div id='todoComplete'>
 
