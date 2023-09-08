@@ -1,12 +1,12 @@
 import '../style/DefaultPage.css';
-import '../style/lv3/Lv3.css';
+import '../style/task3/Task3.css';
 
 
-function Lv3() {
+function Task3() {
     return (
       <div id='Page'>
         <div id='header'>
-        <h1>LEVEL 3</h1>
+        <h1>TASK 3</h1>
       
         </div>
         <text>Weather Bergen</text>
@@ -16,4 +16,4 @@ function Lv3() {
     );
   }
   
-  export default Lv3;
+  export default Task3;

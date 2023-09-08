@@ -1,12 +1,12 @@
 import '../style/DefaultPage.css';
-import '../style/lv4/Lv4.css';
+import '../style/task4/Task4.css';
 
 
-function Lv4() {
+function Task4() {
     return (
       <div id='Page'>
         <div id='header'>
-        <h1>LEVEL 4</h1>
+        <h1>TASK 4</h1>
       
         </div>
         <text>User login</text>
@@ -16,4 +16,4 @@ function Lv4() {
     );
   }
   
-  export default Lv4;
+  export default Task4;

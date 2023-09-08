@@ -6,23 +6,23 @@ function Hotbar(){
     function homeClick(){
         navitgate('/home');
     }
-    function lv1Click(){
+    function task1Click(){
         
-        navitgate('/lv1');
+        navitgate('/task1');
         
     }
-    function lv2Click(){
+    function task2Click(){
         
-        navitgate('/lv2');
+        navitgate('/task2');
 
     }
-    function lv3Click(){
+    function task3Click(){
 
-        navitgate('/lv3');
+        navitgate('/task3');
     }
-    function lv4Click(){
+    function task4Click(){
 
-        navitgate('/lv4');
+        navitgate('/task4');
     }
     
     const location = useLocation();
@@ -30,10 +30,10 @@ function Hotbar(){
     return(
     <div className="Hotbar">
         <button className={`btn ${location.pathname === '/home' ? 'active' :''} || ${location.pathname === '/' ? 'active' :''}`} id='home' onClick={homeClick}>Home</button>
-        <button className={`btn ${location.pathname === '/lv1' ? 'active' :''}`} id="lv1"onClick={lv1Click}>Level 1</button>
-        <button className={`btn ${location.pathname === '/lv2' ? 'active' :''}`} id="lv2"onClick={lv2Click}>Level 2</button>
-        <button className={`btn ${location.pathname === '/lv3' ? 'active' :''}`} id="lv3"onClick={lv3Click}>Level 3</button>
-        <button className={`btn ${location.pathname === '/lv4' ? 'active' :''}`} id="lv4"onClick={lv4Click}>Level 4</button>
+        <button className={`btn ${location.pathname === '/task1' ? 'active' :''}`} id="task1"onClick={task1Click}>Task 1</button>
+        <button className={`btn ${location.pathname === '/task2' ? 'active' :''}`} id="task2"onClick={task2Click}>Task 2</button>
+        <button className={`btn ${location.pathname === '/task3' ? 'active' :''}`} id="task3"onClick={task3Click}>Task 3</button>
+        <button className={`btn ${location.pathname === '/task4' ? 'active' :''}`} id="task4"onClick={task4Click}>Task 4</button>
   
     </div>
         

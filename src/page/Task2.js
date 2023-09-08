@@ -1,21 +1,33 @@
 import '../style/DefaultPage.css';
-import '../style/lv2/Lv2.css';
-import '../style/lv2/Todo.css';
+import '../style/task2/Task2.css';
+import '../style/task2/Todo.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useRef, useState } from 'react';
 
-function Lv2() {
-    const handleAddTodo = () => {
-      
-        if(newtoDos.trim() !== ""){
-            setTodos([...toDos, newtoDos]);     
-            setNewTodos("");
-            
-            inputRef.current.focus();
 
+function Task2() {
+    const handleAddTodo = () => {
+      console.log("Add btn clicked");
+      if(checkListSize()<12) {
+        if(newtoDos.trim() !== ""){
+          setTodos([...toDos, newtoDos]);     
+          setNewTodos("");
+              
+          inputRef.current.focus();
         }
+      } else {
+
+      console.log("listsize 12 or more")
+        // make input field red
+
+        // add text in input field "too many todos"
+        setNewTodos("The Todo list is full!")
+
+      }
+      
+
     };
 
     const inputRef = useRef(null);
@@ -49,15 +61,20 @@ function Lv2() {
       }
     };
    
+    const checkListSize = (e) => {
+      console.log("list size : " + toDos.length)
+      return toDos.length
+    }
+
   return (
       <div id='Page'>
         <div id='header'>
-          <h1>LEVEL 2</h1>
+          <h1>TASK 2</h1>
         </div>
         <text>Todo-list</text>
     
     
-        <div id='lv2PageContainer'>
+        <div id='task2PageContainer'>
           <div id='todoBox'>
             <input id='inputBar' onKeyDown={handleEnter} ref={inputRef} type='text' value={newtoDos} onChange={handleInputChange} autoComplete='off'/>
             <button id ='addTodoBtn'onClick={handleAddTodo}>Add</button>
@@ -91,4 +108,4 @@ function Lv2() {
     );
   }
   
-  export default Lv2;
+  export default Task2;

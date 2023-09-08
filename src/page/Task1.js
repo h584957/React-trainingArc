@@ -1,11 +1,11 @@
 import '../style/DefaultPage.css';
-import '../style/lv1/Calculator.css';
-import '../style/lv1/Lv1.css';
+import '../style/task1/Calculator.css';
+import '../style/task1/Task1.css';
 import { evaluate } from 'mathjs';
 
 
 
-function Lv1() {
+function Task1() {
   const calculate = (str) => {
     try {
       return evaluate(str);
@@ -68,9 +68,9 @@ const handleEnter=(e)=>{
     
       <div id='Page'>
         <div id='header'>
-        <h1>LEVEL 1</h1>
+        <h1>TASK 1</h1>
         </div>
-        <div id='lv1PageContainer'>
+        <div id='task1PageContainer'>
           <text id ='calcText'>Calculator</text>
        
        
@@ -131,4 +131,4 @@ const handleEnter=(e)=>{
     );
   }
   
-  export default Lv1;
+  export default Task1;

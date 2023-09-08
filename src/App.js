@@ -2,10 +2,10 @@ import React from 'react';
 import './style/App.css';
 import Hotbar from './components/Hotbar';
 import Home from './page/Home.js';
-import Lv1 from './page/Lv1.js';
-import Lv2 from './page/Lv2.js';
-import Lv3 from './page/Lv3.js';
-import Lv4 from './page/Lv4.js';
+import Task1 from './page/Task1.js';
+import Task2 from './page/Task2.js';
+import Task3 from './page/Task3.js';
+import Task4 from './page/Task4.js';
 
 import {Route, Routes, BrowserRouter} from 'react-router-dom';
 
@@ -18,10 +18,10 @@ function App() {
       <Routes Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/home' element={<Home/>} />
-        <Route path='/lv1' element={<Lv1/>} />
-        <Route path='/lv2' element={<Lv2/>} />
-        <Route path='/lv3' element={<Lv3/>} />
-        <Route path='/lv4' element={<Lv4/>} />
+        <Route path='/task1' element={<Task1/>} />
+        <Route path='/task2' element={<Task2/>} />
+        <Route path='/task3' element={<Task3/>} />
+        <Route path='/task4' element={<Task4/>} />
       </Routes>
   </BrowserRouter>
 
