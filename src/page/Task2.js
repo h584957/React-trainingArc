@@ -97,12 +97,8 @@ function Task2() {
 
           </div>
           <div id='todoComplete'>
-
           </div>
-
-
         </div>
-    
       </div>
  
     );
