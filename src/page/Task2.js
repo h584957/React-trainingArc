@@ -21,9 +21,8 @@ function Task2() {
 
       console.log("listsize 12 or more")
         // make input field red
-
-        // add text in input field "too many todos"
-        setNewTodos("The Todo list is full!")
+        setListFull(true);
+        console.log("list was set to " + listFull);
 
       }
       
@@ -35,9 +34,12 @@ function Task2() {
 
     const [toDos, setTodos] = useState([]);
     const [newtoDos, setNewTodos] = useState("");
+    const [listFull, setListFull] = useState(false);
+
     const handleInputChange = (e) => {
       console.log("entered handleIn");
       setNewTodos(e.target.value);
+      setListFull(false);
     };
 
     const handleCompleteTodo = (e) => {
@@ -76,15 +78,26 @@ function Task2() {
     
         <div id='task2PageContainer'>
           <div id='todoBox'>
-            <input id='inputBar' onKeyDown={handleEnter} ref={inputRef} type='text' value={newtoDos} onChange={handleInputChange} autoComplete='off'/>
+            <input 
+            id='inputBar'
+            onKeyDown={handleEnter} ref={inputRef} 
+            type='text'
+            value={newtoDos}
+            onChange={handleInputChange} 
+            autoComplete='off'
+            className={listFull ? 'inputBarFull' : ''}
+            />
             <button id ='addTodoBtn'onClick={handleAddTodo}>Add</button>
 
             <div id='todoListBox'>
               <ul id='listContainer'>
-                {toDos.map((todo, index) => (<li id="list" key={index}>{todo}<button id='checkTodo' onClick={handleCompleteTodo} className='todoBtn'>
+                {toDos.map((todo, index) => 
+                (<li id="list" key={index}>{todo}<button id='checkTodo' 
+                onClick={handleCompleteTodo} className='todoBtn'>
             <FontAwesomeIcon icon={faCheck} />
             </button>
-            <button id='deleteTodo' onClick={handleDeleteTodo} className='todoBtn'>
+            <button id='deleteTodo' onClick={handleDeleteTodo}
+            className='todoBtn'>
             <FontAwesomeIcon icon={faXmark} />
             </button> </li>))}                
                 

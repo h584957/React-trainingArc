@@ -51,13 +51,9 @@
     font-size: xx-large;
 }
 
-/* make input bar red when list is full */
-#inputBar {
-background-color: green;
-}
 
 .inputBarFull {
-    background-color: red; 
+    border: 30px  solid red; 
 }
 
 
