@@ -8,6 +8,9 @@ import { useRef, useState } from 'react';
 
 
 function Task2() {
+
+    const listFullStr = "The list is full!";
+
     const handleAddTodo = () => {
       console.log("Add btn clicked");
       if(checkListSize()<12) {
@@ -22,6 +25,8 @@ function Task2() {
       console.log("listsize 12 or more")
         // make input field red
         setListFull(true);
+        // error msg, todolist full
+        setNewTodos(listFullStr);
         console.log("list was set to " + listFull);
 
       }
@@ -35,21 +40,37 @@ function Task2() {
     const [toDos, setTodos] = useState([]);
     const [newtoDos, setNewTodos] = useState("");
     const [listFull, setListFull] = useState(false);
+    const [archive, setArchive] = useState([]);
 
     const handleInputChange = (e) => {
-      console.log("entered handleIn");
       setNewTodos(e.target.value);
+
+      // removes red inputfield 
       setListFull(false);
+      // removes error msg if list is full
+      if(newtoDos === listFullStr){
+        setNewTodos("");
+      }
     };
 
-    const handleCompleteTodo = (e) => {
+    const handleCompleteTodo = (index) => {
 
+      const completedElement = toDos[index];
+      setArchive([...archive, completedElement]);
+      handleDeleteTodo(index);
+      console.log(archive[0]);
+
+      setListFull(false);
       console.log("Todo was completed");
     };
 
-    const handleDeleteTodo = (e) => {
+    const handleDeleteTodo = (index) => {
 
-      
+      // delete element
+      const updatedTodos = [...toDos]; 
+      updatedTodos.splice(index, 1);
+      setTodos(updatedTodos);
+      setListFull(false);
       console.log("Todo was deleted");
     };
 
@@ -64,7 +85,6 @@ function Task2() {
     };
    
     const checkListSize = (e) => {
-      console.log("list size : " + toDos.length)
       return toDos.length
     }
 
@@ -85,14 +105,16 @@ function Task2() {
             value={newtoDos}
             onChange={handleInputChange} 
             autoComplete='off'
-            className={listFull ? 'inputBarFull' : ''}
+            style={{backgroundColor: listFull ? 'red' : 'initial'}}
             />
             <button id ='addTodoBtn'onClick={handleAddTodo}>Add</button>
 
             <div id='todoListBox'>
               <ul id='listContainer'>
                 {toDos.map((todo, index) => 
-                (<li id="list" key={index}>{todo}<button id='checkTodo' 
+                (<li id="list" key={index}>
+                  {todo}
+                <button id='checkTodo' 
                 onClick={handleCompleteTodo} className='todoBtn'>
             <FontAwesomeIcon icon={faCheck} />
             </button>
@@ -110,6 +132,14 @@ function Task2() {
 
           </div>
           <div id='todoComplete'>
+           <ul id='archiveContainer'>
+                  {archive.map((completed,index) => 
+                  (<li id = 'archiveElement' key={index}>
+                    {completed}
+                    </li>))}
+
+           </ul>
+
           </div>
         </div>
       </div>

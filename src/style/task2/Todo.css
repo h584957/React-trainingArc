@@ -1,6 +1,36 @@
+/*fullContainer */
+#task2PageContainer{
+    display: flex;
+    border: solid orange;
+
+    height: 70vh;
+    width: 100%;
+}
+/*arvhicecontainer */
+#todoComplete{
+    display: flex;
+    width: 50%;
+    border: 2px solid pink;
+}
+
+#archiveContainer{
+    border: solid red;
+    height: 100%;
+    width: 100%;
+    color: white;
+    flex-direction: column;
+    font-size: xx-large;
+
+}
+#archive{
+    color: white;
+    font-size: xx-large;
+}
+
+/*Todolist */
 #todoBox{
     border: purple solid;
-    width: 70%;
+    width: 50%;
 }
 .todoBtn{
     color: white;
@@ -51,9 +81,8 @@
     font-size: xx-large;
 }
 
-
-.inputBarFull {
-    border: 30px  solid red; 
+.inputBar {
+    background-color: black; 
 }
 
 
