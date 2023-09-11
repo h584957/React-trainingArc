@@ -55,10 +55,11 @@ function Task2() {
 
     const handleCompleteTodo = (index) => {
 
-      const completedElement = toDos[index];
+      const completedElement = toDos[index,0];
+      console.log("Completed Element:", completedElement);
       setArchive([...archive, completedElement]);
       handleDeleteTodo(index);
-      console.log(archive[0]);
+      console.log("Archive:", archive);
 
       setListFull(false);
       console.log("Todo was completed");
@@ -132,6 +133,7 @@ function Task2() {
 
           </div>
           <div id='todoComplete'>
+            <h1 id = 'completedTodos'>Completed Todos</h1>
            <ul id='archiveContainer'>
                   {archive.map((completed,index) => 
                   (<li id = 'archiveElement' key={index}>

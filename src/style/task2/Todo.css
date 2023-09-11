@@ -6,30 +6,35 @@
     height: 70vh;
     width: 100%;
 }
-/*arvhicecontainer */
+/*archive */
 #todoComplete{
     display: flex;
     width: 50%;
     border: 2px solid pink;
+    flex-direction: column;
+    
+}
+#completedTodos {
+    align-self: center;
 }
 
 #archiveContainer{
     border: solid red;
     height: 100%;
-    width: 100%;
     color: white;
     flex-direction: column;
     font-size: xx-large;
 
+    display: flex;
+    align-items: left;
+    padding-left: 10%;
+    
 }
-#archive{
-    color: white;
-    font-size: xx-large;
-}
+
+
 
 /*Todolist */
 #todoBox{
-    border: purple solid;
     width: 50%;
 }
 .todoBtn{
@@ -48,7 +53,6 @@
     height: 50px;
     border-radius: 100px;
     margin-left: 10px;
-
 }
 #deleteTodo{
     background-color: red;
@@ -56,7 +60,6 @@
     height: 50px;
     border-radius: 100px;
     margin-left: 10px;
-
 }
 .todoBtnPics{
     height: 80px;
@@ -106,6 +109,4 @@
     color: white;
     flex-direction: column;
     font-size: xx-large;
-
-
 }
