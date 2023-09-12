@@ -1,5 +1,4 @@
 import '../style/DefaultPage.css';
-import '../style/task2/Task2.css';
 import '../style/task2/Todo.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

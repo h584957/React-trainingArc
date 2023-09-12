@@ -3,6 +3,11 @@ import '../style/task3/Task3.css';
 
 
 function Task3() {
+    
+
+
+
+
     return (
       <div id='Page'>
         <div id='header'>
