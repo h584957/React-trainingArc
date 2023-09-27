@@ -1,0 +1,49 @@
+#task4Container{
+    border: red solid 2px;
+    height: 70vh;
+    display: flex;
+
+}
+#loginContainer{
+    border: green solid 2px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+#loginInputBox{
+    border: yellow 2px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+#registerContainer{
+    border: purple solid 2px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+}
+#registerInputBox{
+    border: yellow 2px solid;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 50px;
+    color: white;
+    background-color: black;
+    border: none;
+
+}
+button{
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+text{
+    font-size: 50px;
+}
+
+
